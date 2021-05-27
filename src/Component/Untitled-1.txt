@@ -1,0 +1,58 @@
+ Quetion5:
+ var obj = [
+            {"id" : 4, "name" :"abc"},
+            {"id" : 10, "name" : "ab2"}, 
+            {"id" : 5, "name" : "abc3"}, 
+            {"id" : 6, "name" : "abc5"}
+        ];  
+function sortArray(arr){
+ return arr.sort((a,b)=>a.id-b.id);
+}
+
+sortArray(obj);
+
+Quetion4:
+
+  function data(url){
+    return fetch(url)
+    .then(response=>response.json())
+    .then(result=>console.log(result))
+  }
+  data("www.example.com/api/get/1");
+
+  Question3:
+         function frequencyCounter(arr){
+            var counter={};
+            for(var i=0;i<arr.length;i++){
+            if(counter[arr[i]]){
+            counter[arr[i]]++;
+            }
+            else{
+             counter[arr[i]]=1;
+            }
+          }
+          console.log(counter);
+           var duplicateArray=[];
+           Object.keys(counter).map((x)=>{
+           if(counter[x]>1){
+           duplicateArray.push(x);
+           }
+           })
+         return duplicateArray;
+     }
+     frequencyCounter([0,1,2,3,4,5,6,7,7,8,9,10]);
+
+
+
+  Question1:
+    
+    function even(arr){
+    var evenArray=[];
+    for(var i=0;i<arr.length;i++){
+       if(arr[i]%2==0){
+          evenArray.push(arr[i]);
+          }
+     } 
+       console.log(evenArray);
+    }
+    even([23,12,46,2,0,78,45]);
